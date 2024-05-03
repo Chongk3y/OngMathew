@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Login-Hobby hub</title>
+</head>
+<body>
+    <section class="nav">
+        <input type="checkbox" id="check"> 
+         <header>
+             <h2> <a href="../Langing_page\Landing_Page.html" class="logo"><img src="images/logo2.jpg" alt=""></a></h2>
+                <div class="navigation2">
+                <a href="../Langing_page\product.html">Products</a>
+                <a href="../Langing_page\login.html">Login</a>
+                <a class="unique2" href="../langing_page\signup.html">Sign Up</a>
+                </div>
+             <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+             </label>
+         </header>    
+
+         <div class="login-page">
+            <div class="form">
+              <h1>Login</h1>
+                <br>
+              <form class="login-form">
+                <input type="text" placeholder="username" id="username"/>
+                <input type="password" id="password" placeholder="password"/>
+                <a class="login" type="submit" onclick="openPop()">login</a>
+                
+
+                <p class="message">Not registered? <a href="../Langing_page\signup.html">Create an account</a></p>
+              </form>
+            </div>
+          </div>
+          
+          <script>
+            function func(){
+              var email =document.getElementById("username").value;
+              var pass = document.getElementById('password').value;
+              if(email == 'meow@gmail.com' && pass == '12345'){
+                window.location.assign('product2.html');
+                alert("Login Successful");
+              }
+              else{
+                alert("Account Does not Exist")
+              }
+            }
+            </script>
+
+    </section>
+    <div class="pop-container">  
+      <div class="pop" id="pop">
+          <i class="fa-solid fa-circle-exclamation"></i>
+           <h2>Profile</h2>
+           <p>Choose Account?</p>
+           <a class="cancel" type="button" onclick="closePop()">Cancel</a>
+           <div class="side">
+           <button class="button1" type="button" onclick="closePop()"><a href="../Ong_Mauricio(Admin)/login-index.html">Admin</a></button>
+         <button class="button2" type="button" onclick="func()"><a href="../../Langing_page\Landing_Page.html">User</a></button>
+
+          </div>
+      </div> 
+   </div>
+
+   <script>
+       let pop = document.getElementById("pop");
+
+       function openPop(){
+           pop.classList.add("open-pop");
+       }
+
+       function closePop(){
+           pop.classList.remove("open-pop");
+       }
+   </script>
+</body>
+
+<footer>
+  <div class="footerContainer">
+      <div class="footerNav">
+          <ul>
+              <li><a href="../Langing_page\Landing_Page.html">Home</a></li>
+              <li><a href="../Langing_page\product.html">Products</a></li>
+              <li><a href="../Langing_page\About.html">About</a></li>
+              <li><a href="../Langing_page\team.html">Our Team</a></li>
+              <li><a href="../Langing_page\faq.html">FAQs</a></li>
+         </ul>
+      </div>
+
+      <h4>Stay Connected with Us!</h4>
+      <div class="socialIcons">
+          <a href="https://www.facebook.com/hobbyhub.rts" target=”_blank”><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUVbmV2ZXIgZ29ubmEgZ2l2ZSB1IHVw" target=”_blank”><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+       </div>
+  </div>
+
+  <div class="footerButtom">
+      <p>Copyright &copy; 2024, Designed by<span class="designer"> Ong & Mauricio</span></p>
+   </div>
+</footer>
+
+
+</html>

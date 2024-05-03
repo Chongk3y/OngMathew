@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Orders</title>
+    <link rel="stylesheet" href="order-style.css" />
+
+    <!-- ------------- Material icon -------------  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- --------------HEADER-------------- -->
+        <header class="header">
+            <div class="menu-icon menubtn" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <button><span class="material-icons-outlined">search</span></button>
+            </div>
+            <div class="header-right">
+                <button>
+                    <span class="material-icons-outlined"> notifications </span>
+                </button>
+                <button><span class="material-icons-outlined"> email </span></button>
+            </div>
+        </header>
+
+        <!-- ----------------SIDEBAR-------------- -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined"> shopping_cart </span>Hobby
+                    Hub
+                </div>
+                <span class="material-icons-outlined xbtn" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <a href="../Dashboard/dashboard-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> dashboard </span>DASHBOARD
+                    </li>
+                </a>
+                <a href="../Products/product-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> inventory_2 </span>
+                        PRODUCTS
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> shopping_cart </span>ORDERS
+                    </li>
+                </a>
+                <a href="../Customers/customer-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> groups </span>CUSTOMERS
+                    </li>
+                </a>
+                <a href="../login-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">logout</span>LOGOUT
+                    </li>
+                </a>
+            </ul>
+        </aside>
+
+        <!-- -------------------MAIN----------------- -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2 style="color: black;">Orders</h2>
+            </div>
+
+            <!-- ------------------TOP BOXES----------------- -->
+            <div class="main-cards">
+                <div class="cards">
+                    <div class="card-inner">
+                        <h3>Pending Orders</h3>
+                        <span class="material-icons-outlined">pending_actions</span>
+                    </div>
+                    <h1>3</h1>
+                </div>
+
+                <div class="cards">
+                    <div class="card-inner">
+                        <h3>Done Orders</h3>
+                        <span class="material-icons-outlined">checklist</span>
+                    </div>
+                    <h1>2</h1>
+                </div>
+
+                <div class="cards">
+                    <div class="card-inner">
+                        <h3>Total Orders</h3>
+                        <span class="material-icons-outlined">shopping_basket</span>
+                    </div>
+                    <h1>5</h1>
+                </div>
+
+                <div class="cards">
+                    <div class="card-inner">
+                        <h3>Total Sales</h3>
+                        <span class="material-icons-outlined">attach_money</span>
+                    </div>
+                    <h1>P3070</h1>
+                </div>
+            </div>
+
+            <!-- ------------------Order Cards----------------- -->
+
+            <div class="order-page">
+                <h3 style="color: black;">Order List</h3>
+
+                <div class="order-container">
+                    <div class="order-card">
+                        <h4>User Details</h4>
+                        <div class="user-details">
+                            <h5><em style="color: rgb(109, 109, 109);">#12345</em></h5>
+                            <h5><em style="color: rgb(109, 109, 109);">04-28-2024</em></h5>
+                            <h5>Name: Jazzer Ong</h5>
+                            <h5>Contact: 09544366891</h5>
+                            <h5>Address: Tetuan drive, zone 69</h5>
+                        </div>
+
+                        <h4>Order Details</h4>
+                        <div class="order-details">
+                            <div class="order-title">
+                                <img src="../Products/img/Whale.jpg" alt="hihi">
+                                <h5>Whale</h5>
+                            </div>
+                            <div class="order-choice">
+                                <h5>Color: <input type="text" value="Blue"></h5>
+                                <h5>Quantity: <input type="number" value="2"></h5>
+                            </div>
+                        </div>
+
+                        <div class="order-price">
+                            <h5>Total Price</h5>
+                            <div class="line"></div>
+                            <p>P140</p>
+                            <select name="status" id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="On delivery">On delivery</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <h4>User Details</h4>
+                        <div class="user-details">
+                            <h5><em style="color: rgb(109, 109, 109);">#12345</em></h5>
+                            <h5><em style="color: rgb(109, 109, 109);">04-28-2024</em></h5>
+                            <h5>Name: Roderock Ambastos</h5>
+                            <h5>Contact: 09544366891</h5>
+                            <h5>Address: Cabatangan, Highway sa gedli</h5>
+                        </div>
+
+                        <h4>Order Details</h4>
+                        <div class="order-details">
+                            <div class="order-title">
+                                <img src="../Products/img/frogNbun.jpg" alt="hihi">
+                                <h5>frogNbun</h5>
+                            </div>
+                            <div class="order-choice">
+                                <h5>Color: <input type="text" value="Pink"></h5>
+                                <h5>Quantity: <input type="number" value="1"></h5>
+                            </div>
+                        </div>
+                        <div class="order-details">
+                            <div class="order-title">
+                                <img src="../Products/img/floral-resin.jpg" alt="hihi">
+                                <h5>Floral Resin</h5>
+                            </div>
+                            <div class="order-choice">
+                                <h5>Color: <input type="text" value="Red"></h5>
+                                <h5>Quantity: <input type="number" value="1"></h5>
+                            </div>
+                        </div>
+
+                        <div class="order-price">
+                            <h5>Total Price</h5>
+                            <div class="line"></div>
+                            <p>P240</p>
+                            <select name="status" id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="On delivery">On delivery</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="order-card">
+                        <h4>User Details</h4>
+                        <div class="user-details">
+                            <h5><em style="color: rgb(109, 109, 109);">#12345</em></h5>
+                            <h5><em style="color: rgb(109, 109, 109);">04-28-2024</em></h5>
+                            <h5>Name: GetThatTherty Carrot</h5>
+                            <h5>Contact: 09544366891</h5>
+                            <h5>Address: Billiards muna par</h5>
+                        </div>
+
+                        <h4>Order Details</h4>
+                        <div class="order-details">
+                            <div class="order-title">
+                                <img src="../Products/img/coffee-beans.jpg" alt="hihi">
+                                <h5>Coffee Resin</h5>
+                            </div>
+                            <div class="order-choice">
+                                <h5>Color: <input type="text" value="White"></h5>
+                                <h5>Quantity: <input type="number" value="1"></h5>
+                            </div>
+                        </div>
+
+                        <div class="order-price">
+                            <h5>Total Price</h5>
+                            <div class="line"></div>
+                            <p>P180</p>
+                            <select name="status" id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="On delivery">On delivery</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+
+    <!-- -------------------SCRIPT------------------ -->
+    <script src="order-script.js"></script>
+</body>
+
+</html>

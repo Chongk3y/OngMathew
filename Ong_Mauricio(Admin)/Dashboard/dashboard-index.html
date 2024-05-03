@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard-style.css" />
+
+  <!-- ------------- Material icon -------------  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="grid-container">
+    <!-- --------------HEADER-------------- -->
+    <header class="header">
+      <div class="menu-icon menubtn" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <div class="header-left">
+        <button><span class="material-icons-outlined">search</span></button>
+      </div>
+      <div class="header-right">
+        <button>
+          <span class="material-icons-outlined"> notifications </span>
+        </button>
+        <button><span class="material-icons-outlined"> email </span></button>
+      </div>
+    </header>
+
+    <!-- ----------------SIDEBAR-------------- -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined"> shopping_cart </span>Hobby
+          Hub
+        </div>
+        <span class="material-icons-outlined xbtn" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <span class="material-icons-outlined"> dashboard </span>DASHBOARD
+        </li>
+        <a href="../Products/product-index.html">
+          <li class="sidebar-list-item">
+            <span class="material-icons-outlined"> inventory_2 </span>
+            PRODUCTS
+          </li>
+        </a>
+        <a href="../Orders/order-index.html">
+          <li class="sidebar-list-item">
+            <span class="material-icons-outlined"> shopping_cart </span>ORDERS
+          </li>
+        </a>
+        <a href="../Customers/customer-index.html">
+          <li class="sidebar-list-item">
+            <span class="material-icons-outlined"> groups </span>CUSTOMERS
+          </li>
+        </a>
+        <a href="../login-index.html">
+          <li class="sidebar-list-item">
+              <span class="material-icons-outlined">logout</span>LOGOUT
+          </li>
+      </a>
+      </ul>
+    </aside>
+
+    <!-- -------------------MAIN----------------- -->
+    <main class="main-container">
+      <div class="main-title">
+        <h2 style="color: black;">Dashboard</h2>
+      </div>
+
+      <!-- ------------------TOP BOXES----------------- -->
+      <div class="main-cards">
+        <div class="cards">
+          <div class="card-inner">
+            <h3>PRODUCTS</h3>
+            <span class="material-icons-outlined"> inventory_2 </span>
+          </div>
+          <h1>10</h1>
+        </div>
+
+        <div class="cards">
+          <div class="card-inner">
+            <h3>CUSTOMERS</h3>
+            <span class="material-icons-outlined"> groups </span>
+          </div>
+          <h1>469</h1>
+        </div>
+
+        <div class="cards">
+          <div class="card-inner">
+            <h3>ALERTS</h3>
+            <span class="material-icons-outlined">notification_important</span>
+          </div>
+          <h1>6</h1>
+        </div>
+      </div>
+
+      <!-- ------------------TOP PRODUCTS----------------- -->
+      <section class="page" id="crochet-page">
+        <h4 style="color: black;">Top 3 Products</h4>
+        <div class="crochet-container">
+
+          <a href="../Products/product-index.html">
+            <div class="crochet-card">
+              <img src="../Products/img/images/featprod6.jpg" alt="Whale" />
+              <h5>Tulips Bouquet</h3>
+                <h6>P360</h6>
+            </div>
+          </a>
+
+          <a href="../Products/product-index.html">
+            <div class="crochet-card">
+              <img src="../Products/img/images/featprod9.jpg" alt="Whale" />
+              <h5>Ocean Mist</h3>
+                <h6>P90</h6>
+            </div>
+          </a>
+
+
+          <a href="../Products/product-index.html">
+            <div class="crochet-card">
+              <img src="../Products/img/images/featured7.jpg" alt="Whale" />
+              <h5>Whale Family</h3>
+                <h6>P70</h6>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+
+    </main>
+  </div>
+
+  <!-- -------------------SCRIPT------------------ -->
+  <script src="dashboard-script.js"></script>
+</body>
+
+</html>

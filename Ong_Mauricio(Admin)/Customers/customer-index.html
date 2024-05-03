@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Customers</title>
+    <link rel="stylesheet" href="customer-style.css" />
+
+    <!-- ------------- Material icon -------------  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- --------------HEADER-------------- -->
+        <header class="header">
+            <div class="menu-icon menubtn" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <button><span class="material-icons-outlined">search</span></button>
+            </div>
+            <div class="header-right">
+                <button>
+                    <span class="material-icons-outlined"> notifications </span>
+                </button>
+                <button>
+                    <span class="material-icons-outlined"> email </span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ----------------SIDEBAR-------------- -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined"> shopping_cart </span>Hobby
+                    Hub
+                </div>
+                <span class="material-icons-outlined xbtn" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <a href="../Dashboard/dashboard-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> dashboard </span>DASHBOARD
+                    </li>
+                </a>
+                <a href="../Products/product-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> inventory_2 </span>
+                        PRODUCTS
+                    </li>
+                </a>
+                <a href="../Orders/order-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> shopping_cart </span>ORDERS
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined"> groups </span>CUSTOMERS
+                    </li>
+                </a>
+                <a href="../login-index.html">
+                    <li class="sidebar-list-item">
+                        <span class="material-icons-outlined">logout</span>LOGOUT
+                    </li>
+                </a>
+            </ul>
+        </aside>
+
+        <!-- -------------------MAIN----------------- -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2 style="color: black;">Customers</h2>
+            </div>
+
+            <!-- -------------------Top boxes----------------- -->
+            <div class="main-cards">
+                <div class="cards">
+                    <div class="card-inner">
+                        <h3>Suspended Accounts</h3>
+                        <span class="material-icons-outlined">
+                            person_off
+                        </span>
+                    </div>
+                    <h1>10</h1>
+                </div>
+
+                <div class="cards">
+                    <div class="card-inner">
+                        <h3>Total Customers</h3>
+                        <span class="material-icons-outlined"> groups </span>
+                    </div>
+                    <h1>20</h1>
+                </div>
+
+                <div class="cards">
+                    <div class="card-inner">
+                        <h3>Alerts</h3>
+                        <span class="material-icons-outlined">notification_important</span>
+                    </div>
+                    <h1>3</h1>
+                </div>
+            </div>
+
+            <!-- ------------------Table details----------------- -->
+            <div class="table-container">
+                <dir class="board">
+                    <table class="table-display">
+
+                        <thead class="table-header">
+                            <tr>
+                                <td>ID</td>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>Contact</td>
+                                <td>Address</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>1</td>
+                                    <td>Jazzer Ong</td>
+                                    <td>onggoy@gmail.com</td>
+                                    <td>09675693720</td>
+                                    <td>Tetuan drive, purok 69</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <div class="popup-suspend" id="popup">
+                                        <img src="/Customers/img/lockCircle.png" alt="lock">
+                                        <h3>Suspend customer</h3>
+                                        <p><input type="radio" name="suspend" id="suspend"> 1 day</p>
+                                        <p><input type="radio" name="suspend" id="suspend"> 3 days</p>
+                                        <p><input type="radio" name="suspend" id="suspend"> 5 days</p>
+                                        <p><input type="radio" name="suspend" id="suspend"> 7 days</p>
+                                        <div class="suspend-choice">
+                                            <button type="button" onclick="closePopup()">Cancel</button>
+                                            <button type="button" onclick="closePopup()">Save</button>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                    <div class="popup-delete" id="popupDel">
+                                        <img src="../Customers/img/deleteCircle.png" alt="">
+                                        <h3>Delete Customer</h3>
+                                        <p>Are you sure you want to delete this customer?</p>
+                                        <div class="delete-choice">
+                                            <button type="button" onclick="closePop()">Yes</button>
+                                            <button type="button" onclick="closePop()">No</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>2</td>
+                                    <td>John Mathew Mauricio</td>
+                                    <td>johnnybravo@gmail.com</td>
+                                    <td>09972384779</td>
+                                    <td>Tulungatung Zone 1</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>3</td>
+                                    <td>Roderock Abastos</td>
+                                    <td>geodude@gmail.com</td>
+                                    <td>09065693720</td>
+                                    <td>Cantantan high way</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>4</td>
+                                    <td>Therty Pesos Carrot</td>
+                                    <td>thertyrabbit@gmail.com</td>
+                                    <td>09966522349</td>
+                                    <td>Divisoria ferer drive</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>5</td>
+                                    <td>Jazzer Ong</td>
+                                    <td>onggoy@gmail.com</td>
+                                    <td>09675693720</td>
+                                    <td>Tetuan drive, purok 69</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>6</td>
+                                    <td>John Mathew Mauricio</td>
+                                    <td>johnnybravo@gmail.com</td>
+                                    <td>09972384779</td>
+                                    <td>Tulungatung Zone 1</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>7</td>
+                                    <td>Roderock Abastos</td>
+                                    <td>geodude@gmail.com</td>
+                                    <td>09065693720</td>
+                                    <td>Cantantan high way</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>8</td>
+                                    <td>Therty Pesos Carrot</td>
+                                    <td>thertyrabbit@gmail.com</td>
+                                    <td>09966522349</td>
+                                    <td>Divisoria ferer drive</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>9</td>
+                                    <td>Jazzer Ong</td>
+                                    <td>onggoy@gmail.com</td>
+                                    <td>09675693720</td>
+                                    <td>Tetuan drive, purok 69</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>10</td>
+                                    <td>John Mathew Mauricio</td>
+                                    <td>johnnybravo@gmail.com</td>
+                                    <td>09972384779</td>
+                                    <td>Tulungatung Zone 1</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>11</td>
+                                    <td>Roderock Abastos</td>
+                                    <td>geodude@gmail.com</td>
+                                    <td>09065693720</td>
+                                    <td>Cantantan high way</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>12</td>
+                                    <td>Therty Pesos Carrot</td>
+                                    <td>thertyrabbit@gmail.com</td>
+                                    <td>09966522349</td>
+                                    <td>Divisoria ferer drive</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>13</td>
+                                    <td>Jazzer Ong</td>
+                                    <td>onggoy@gmail.com</td>
+                                    <td>09675693720</td>
+                                    <td>Tetuan drive, purok 69</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>14</td>
+                                    <td>John Mathew Mauricio</td>
+                                    <td>johnnybravo@gmail.com</td>
+                                    <td>09972384779</td>
+                                    <td>Tulungatung Zone 1</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>15</td>
+                                    <td>Roderock Abastos</td>
+                                    <td>geodude@gmail.com</td>
+                                    <td>09065693720</td>
+                                    <td>Cantantan high way</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>16</td>
+                                    <td>Therty Pesos Carrot</td>
+                                    <td>thertyrabbit@gmail.com</td>
+                                    <td>09966522349</td>
+                                    <td>Divisoria ferer drive</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>17</td>
+                                    <td>Jazzer Ong</td>
+                                    <td>onggoy@gmail.com</td>
+                                    <td>09675693720</td>
+                                    <td>Tetuan drive, purok 69</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>18</td>
+                                    <td>John Mathew Mauricio</td>
+                                    <td>johnnybravo@gmail.com</td>
+                                    <td>09972384779</td>
+                                    <td>Tulungatung Zone 1</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>19</td>
+                                    <td>Roderock Abastos</td>
+                                    <td>geodude@gmail.com</td>
+                                    <td>09065693720</td>
+                                    <td>Cantantan high way</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+                            <tr class="user">
+                                <div class="user-details">
+                                    <td>20</td>
+                                    <td>Therty Pesos Carrot</td>
+                                    <td>thertyrabbit@gmail.com</td>
+                                    <td>09966522349</td>
+                                    <td>Divisoria ferer drive</td>
+                                </div>
+
+                                <td class="status">
+                                    <button type="submit" class="btn suspend" onclick="openPopup()">Suspend</button>
+                                    <button type="submit" class="btn delete" onclick="openPop()">Delete</button>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </dir>
+            </div>
+
+
+        </main>
+    </div>
+
+    <!-- -------------------SCRIPT------------------ -->
+    <script src="customer-script.js"></script>
+</body>
+
+</html>

@@ -11,70 +11,75 @@ body{
 }
 
 /*Start of FAQ*/
-.wrapper{
-    height: 100vh;
-    max-width: 75%;
-    margin: auto;
-    padding-top: 50px;
-}
-
-.wrapper > p, 
-.wrapper > h1{
-    margin: 1.5rem 0;
-    text-align: center;
-}
-
-.wrapper > h1{
-    letter-spacing: 3px;
-} 
-
 .accordion{
-    background-color: white;
-    color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-    font-size: 1.2rem;
+    margin: 60px auto;
+    width: 90%;
+    height: 70vh;
+}
+
+.accordion li{
+    list-style: none;
     width: 100%;
-    padding: 2rem 2.5rem;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: whitesmoke;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.15);
+}
+
+.accordion li label{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.accordion .label:hover{
+    color: #111;
+}
+.label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.accordion i{
-    font-size: 1.6rem;
-}
-
-.active,
-.accordion:hover{
-    background-color: #f1f7f5;
-}
-
-.pannel{
-    padding: 0 2rem 2.5rem 2rem;
-    background-color: white;
-    overflow: hidden;
-    background-color: #f1f7f5 ;
+input[type="radio"]{
     display: none;
-   
 }
 
-.pannel p{
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 1.2rem;
-    line-height: 1.4;
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
 }
 
-.faq {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 10px 0px;
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
 }
 
-.faq.active{
-    border: none;
+.accordion input[type="radio"]:checked + label::before{
+    content: '-';
+}
+
+@media (max-width:700px) {
+    .accordion{
+        height: 100vh;
+        margin-right: 60px;
+    }
+    .accordion li label{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .accordion p{
+        font-size: 15px;
+    }
 }
 
 
